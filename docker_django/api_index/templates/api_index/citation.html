@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Citations aléatoires</title>
+</head>
+<body>
+    <h1>Citation du jour</h1>
+    <p class="mon-element">{{ citation.texte }}</p>
+    <button onclick="location.reload();">Nouvelle Citation</button>
+</body>
+<footer>
+    <p> Made with ❤️ by mydmoov  on  31/10/2023 </p>
+</footer>
+</html>
