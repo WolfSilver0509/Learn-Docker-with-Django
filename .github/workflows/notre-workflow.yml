@@ -1,0 +1,26 @@
+name: Github action workflow tutorial
+
+on:
+  push:
+    branches: [ Workflow ]
+
+
+jobs:
+  projet-demo-django-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11 # Version de python
+
+      - name: Install dependencies
+        run: | 
+          python -m pip install --upgrade pip
+          cd docker_django
+          pip install -r requirements.txt
+
+          
